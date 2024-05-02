@@ -1,0 +1,37 @@
+# Sample career guidance system
+
+# Sample career options and their descriptions
+career_options = {
+    "1": "Software Developer - Develops software applications and systems.",
+    "2": "Data Scientist - Analyzes and interprets complex data to inform decision-making.",
+    "3": "Digital Marketer - Develops and implements online marketing strategies.",
+    "4": "Graphic Designer - Creates visual concepts using computer software or by hand.",
+    "5": "Civil Engineer - Designs and oversees construction projects, such as roads and buildings."
+}
+
+# Function to display career options
+def display_options():
+    print("Career Options:")
+    for option, description in career_options.items():
+        print(f"{option}. {description}")
+
+# Function to provide guidance based on user input
+def provide_guidance(choice):
+    if choice in career_options:
+        print(f"You selected: {career_options[choice]}")
+    else:
+        print("Invalid choice. Please select a valid option.")
+
+# Main function
+def main():
+    print("Welcome to the Career Guidance System!")
+    while True:
+        display_options()
+        choice = input("Enter the number corresponding to the career option you're interested in (or 'q' to quit): ")
+        if choice.lower() == 'q':
+            print("Thank you for using the Career Guidance System. Goodbye!")
+            break
+        provide_guidance(choice)
+
+if __name__ == "__main__":
+    main()
